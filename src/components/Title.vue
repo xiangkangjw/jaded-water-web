@@ -2,9 +2,8 @@
   <div id="logo" style="padding: 5%; height: 50ex; position:relative">
     <svg viewBox="0 0 400 80">
       <defs id="Svglogo"></defs>
-      <g id="SvgjsG1676"
-        transform="matrix(0.8865504081126907,0,0,0.8865504081126907,-12.065064686629364,-9.069410269162256)"
-        fill="#f64c72">
+      <g id="SvgjsG1676" class="logo"
+        transform="matrix(0.8865504081126907,0,0,0.8865504081126907,-12.065064686629364,-9.069410269162256)">
         <g xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M80.11,49.695c0.003,5.951,1.481,10.771,3.303,10.771   c1.823,0,3.302-4.824,3.305-10.768c-0.003-5.951-1.479-10.773-3.303-10.773C81.591,38.926,80.107,43.748,80.11,49.695z">
@@ -40,12 +39,11 @@ export default {
 </script>
 
 <style scoped>
-
 #logo {
   min-height: 100ex;
   background-image: url('./../assets/about.jpg');
   background-repeat: no-repeat;
-  background-size:100%;
+  background-size: 100%;
 }
 
 div svg {
@@ -57,5 +55,9 @@ div svg {
   right: 10;
   margin: 20px;
   text-align: center;
+}
+
+div svg .logo {
+  fill: #f64c72;
 }
 </style>

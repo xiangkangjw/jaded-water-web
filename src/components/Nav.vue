@@ -1,12 +1,28 @@
 <template>
-   <div class="topnav sticky">
-  <a class="active" href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#people">People</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</div>
-  </template>
+  <div class="topnav sticky">
+    <div class="navbar-container">
+      <div id="navbar-logo">
+      <h1><a href="#">Jaded Water Technologies</a></h1>
+    </div>
+    <div id="navbarMenus">
+      <ul id="navBody">
+        <li class="navList">
+          <a href="#about">About</a>
+        </li>
+        <li class="navList">
+          <a href="#people">People</a>
+        </li>
+        <li class="navList">
+          <a href="#projects">Projects</a>
+        </li>
+        <li class="navList">
+          <a href="#contact">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</template>
 
 <script>
 export default {
@@ -17,10 +33,26 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+
 .topnav {
   background-color: #553d67;
   overflow: hidden;
-  z-index: 100;
+  z-index: 10;
+  padding: 5px  10px;
+  display: flex;
+   justify-content: space-between;
+}
+
+.navbar-container {
+   width: 90%;
+   margin: 0 auto;
 }
 
 /* Style the links inside the navigation bar */
@@ -28,32 +60,44 @@ export default {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 10px 30px;
+  padding: 5px 5px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 12px;
+  transition: all 0.3s;
+  border-radius: 1px;
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.topnav #navbarMenus a:hover {
+  color: #f64c72;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #f64c72;
-  color: white;
+#navbarMenus {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#navbarMenus ul {
+   display: flex;
+   justify-content: center;
+   gap: 40px;
+   list-style: none;
+}
+
+#navbar-logo {
+  font-size: 500%;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
-    position: -webkit-sticky;
-	position: sticky;
-	top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
+.sticky+.content {
+  padding-top: 30px;
 }
 </style>

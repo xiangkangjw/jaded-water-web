@@ -39,10 +39,6 @@
       Under construction
     </div>
   </div>
-  <footer id="contact">
-    <p><a href="mailto:jacob.wang@jadedwater.com">Email us</a></p>
-    <p>Jaded Water Technologies, Toronto, Canada</p>
-  </footer>
 </template>
 
 <script>
