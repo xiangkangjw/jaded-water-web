@@ -2,26 +2,26 @@
   <div class="topnav sticky">
     <div class="navbar-container">
       <div id="navbar-logo">
-      <h1><a href="#">Jaded Water Technologies</a></h1>
+      <h1><router-link to="/">Jaded Water Technologies</router-link></h1>
     </div>
     <div id="navbarMenus">
       <ul id="navBody">
         <li class="navList">
-          <a href="#about">About</a>
+          <router-link to="/about">About</router-link>
         </li>
         <li class="navList">
-          <a href="#people">People</a>
+          <router-link to="/projects">Projects</router-link>
         </li>
         <li class="navList">
-          <a href="#projects">Projects</a>
-        </li>
-        <li class="navList">
-          <a href="#contact">Contact Us</a>
+          <router-link to="/people">People</router-link>
         </li>
       </ul>
     </div>
     </div>
   </div>
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <script>

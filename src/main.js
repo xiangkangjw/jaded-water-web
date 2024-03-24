@@ -5,8 +5,45 @@ import App from './App.vue'
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
+import { createWebHistory, createRouter } from 'vue-router';
+import About from './components/About.vue';
+import People from './components/People.vue';
+import Projects from './components/Projects.vue';
+import Home from './components/Home.vue'; 
 
-createApp(App).mount('#app')
+const routes = [
+  {path:'/', name: 'home', component: Home,},
+  {
+    path: '/about',
+    name: 'about',
+    component: About,
+  },
+  {
+    path: '/people',
+    name: 'people',
+    component: People,
+  },
+  {
+    path: '/projects',
+    name: 'ProjectProject',
+    component: Projects,
+  },
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes: routes,
+  scrollBehavior(to) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
+  },
+});
+
+createApp(App).use(router).mount('#app')
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional

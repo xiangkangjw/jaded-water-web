@@ -1,28 +1,16 @@
 <template>
-  <div id="about">
+  <div id="people">
     <div class="document">
       <h1 class="title document-title" >
-        About
+        Under Construction
       </h1>
-      <p class="content document-paragraph">
-        Our team of experienced professionals provides specialized expertise and advice in a range of technical areas,
-        including software development, data analytics, cybersecurity, and IT infrastructure management. We work with
-        clients across a variety of industries to help them optimize their technology investments and achieve their
-        business objectives.
-      </p>
-      <p class="content document-paragraph">
-        From strategic planning and project management to software development and systems integration, our services are
-        tailored to meet the unique needs of each client. We partner with technology vendors to provide access to the
-        latest tools and technologies, and our goal is to help clients stay ahead in an increasingly competitive and
-        fast-paced business environment.
-      </p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AboutCompany',
+  name: 'PeoplePeople',
 }
 </script>
 
@@ -55,18 +43,18 @@ section {
   display: inline-block;
 }
 
-#about {
-  background-image: url('./../assets/mobile-app.jpg');
+#people {
+  background-image: url('./../assets/consulting-pic-1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   width: 100%; /* Adjust to your preference */
   height: 100%; /* Adjust to your preference */
   background-position: center;
-  padding: 30px 0;
+  padding: 100px 0;
 }
 
-#about::before {
+#people::before {
   content: "";
   position: absolute;
   top: 0;
@@ -90,11 +78,4 @@ section {
   font-size: 50px; /* Title size */
   margin-bottom: 20px; /* Space between the title and first paragraph */
 }
-
-.document-paragraph {
-  font-size: 24px; /* Paragraph text size */
-  text-align: justify; /* Justify text for a clean, aligned look */
-  margin-bottom: 10px; /* Space between paragraphs */
-}
-
 </style>
